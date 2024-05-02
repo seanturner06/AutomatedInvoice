@@ -6,10 +6,10 @@ module.exports = class Invoice {
     invoicedate = null;
 
     constructor(data) {
-        this.id = data.par_id;
-        this.number = data.par_number;
-        this.customerid = data.par_customerid;
-        this.totalamount = data.par_totalamount;
-        this.invoicedate = data.par_invoicedate;
+        this.id = data.inv_id;
+        this.number = data.inv_number;
+        this.customerid = data.inv_customerid;
+        this.totalamount = data.inv_totalamount;
+        this.invoicedate = data.inv_invoicedate;
     }
 }
