@@ -11,4 +11,8 @@ const html_dir = path.join(__dirname, '../../templates/');
 * FRONTEND ROUTES *
 \*****************/
 
+frontendRouter.get('/', (req, res) => {
+    res.sendFile(`${html_dir}index.html`);
+});
+
 module.exports = frontendRouter;
