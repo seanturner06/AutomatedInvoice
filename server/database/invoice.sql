@@ -15,3 +15,13 @@ CREATE TABLE IF NOT EXISTS `invoice` (
     `inv_totalamount` decimal(10,2) NOT NULL,
     PRIMARY KEY (`inv_id`)
 )
+
+CREATE TABLE IF NOT EXISTS `user` (
+    `usr_id` int(10) unsigned NOT NULL AUTO_INCREMENT, 
+    `usr_name` VARCHAR(20) NOT NULL, 
+    `usr_password` VARCHAR(20) NOT NULL,
+    PRIMARY KEY (`user_id`)
+)
+
+INSERT INTO `user` (`usr_id`, `usr_username`, `usr_password`) VALUES 
+(1, 'admin', 'cantgetin');
