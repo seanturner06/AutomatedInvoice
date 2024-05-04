@@ -13,6 +13,7 @@ const { TokenMiddleware, generateToken, removeToken } = require('../middleware/T
 \************/
 
 const InvoiceDAO = require('./db/InvoiceDAO');
+const UserDAO = require('./db/UserDAO');
 
 // Get all invoices 
 apiRouter.get('/invoices', TokenMiddleware, (req, res) => {

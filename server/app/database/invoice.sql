@@ -7,6 +7,7 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+USE business; 
 CREATE TABLE IF NOT EXISTS `invoice` (
     `inv_id` int(10) unsigned NOT NULL AUTO_INCREMENT, 
     `inv_number` int(10) unsigned NOT NULL, 
@@ -14,14 +15,14 @@ CREATE TABLE IF NOT EXISTS `invoice` (
     `inv_customerid` int(10) unsigned NOT NULL,
     `inv_totalamount` decimal(10,2) NOT NULL,
     PRIMARY KEY (`inv_id`)
-)
+);
 
 CREATE TABLE IF NOT EXISTS `user` (
     `usr_id` int(10) unsigned NOT NULL AUTO_INCREMENT, 
-    `usr_name` VARCHAR(20) NOT NULL, 
+    `usr_username` VARCHAR(20) NOT NULL, 
     `usr_password` VARCHAR(20) NOT NULL,
-    PRIMARY KEY (`user_id`)
-)
+    PRIMARY KEY (`usr_id`)
+);
 
 INSERT INTO `user` (`usr_id`, `usr_username`, `usr_password`) VALUES 
 (1, 'admin', 'cantgetin');
