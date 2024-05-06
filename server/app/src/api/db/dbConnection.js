@@ -22,6 +22,7 @@ exports.query = (query, params = []) => {
             connection = exports.getDatabaseConnection();
         }
         connection.query(query, params, (err, results, fields) => {
+            console.log('query');
             if (err) {
                 reject(err);
                 return;

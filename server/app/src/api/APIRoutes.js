@@ -42,14 +42,13 @@ apiRouter.post('/invoices', TokenMiddleware, (req, res) => {
 
 // Authentication routes
 apiRouter.post('/users/login', (req, res) => {
+    console.log(req.body);
     if (req.body.username && req.body.password) {
         UserDAO.getUserByCredentials(req.body.username, req.body.password).then(user => {
             let result = {
                 user: user
             }
-
             generateToken(req, res, user);
-
             res.json(result);
         }).catch(err => {
             res.status(400).json({ error: err });
